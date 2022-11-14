@@ -1,0 +1,42 @@
+[
+    {"type": "mysql", "fields": 
+        {
+            "driver": "mysql", 
+            "login": "root", 
+            "password": "1qaz2wsx", 
+            "server": "localhost", 
+            "port": "5432", 
+            "title_datebase": "task_6_ORM"
+        }
+    },
+    {"type": "postgresql", "fields": 
+        {
+            "driver": "postgresql", 
+            "login": "postgres", 
+            "password": "1qaz2wsx", 
+            "server": "localhost", 
+            "port": "5432", 
+            "title_datebase": "task_6_ORM"
+        }
+    },
+    {"type": "oracle", "fields": 
+        {
+            "driver": "oracle", 
+            "login": "root", 
+            "password": "1qaz2wsx", 
+            "server": "localhost", 
+            "port": "5432", 
+            "title_datebase": "task_6_ORM"
+        }
+    },
+    {"type": "firebird", "fields": 
+        {
+            "driver": "firebird", 
+            "login": "root", 
+            "password": "1qaz2wsx", 
+            "server": "localhost", 
+            "port": "5432", 
+            "title_datebase": "task_6_ORM"
+        }
+    }
+]

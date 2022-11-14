@@ -65,19 +65,19 @@ def download_json():
 
 if __name__ == '__main__':
     
-    driver = 'postgresql'
-    login = 'postgres'
-    password = '1qaz2wsx'
-    server = 'localhost'
-    port = '5432'
-    title_datebase = 'task_6_ORM'
+    # получение персональных данных для подключения 
+    with open(os.getenv('SQL_Alchemy'), 'r') as file:
+        for i in json.load(file):
+            if i['type'] == 'postgresql':
+                sql = i['fields']
+                break
 
-    DSN = f'{driver}://{login}:{password}@{server}:{port}/{title_datebase}' 
+    DSN = f'''{sql["driver"]}://{sql["login"]}:{sql["password"]}@{sql["server"]}:{sql["port"]}/{sql["title_datebase"]}''' 
 
     # создание объекта engine который может подключаться к БД:
     engine = sqlalchemy.create_engine(DSN)
 
-    #создание таблиц базы данных согласно моделей
+    # создание таблиц базы данных согласно моделей
     create_tables(engine)
 
     # создание сессии
