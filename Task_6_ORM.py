@@ -49,7 +49,7 @@ def download_json():
     
     '''
 
-    with open('db_test.json', 'r', encoding='utf-8') as file:
+    with open('fixtures/db_test.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
 
     for record in data:
